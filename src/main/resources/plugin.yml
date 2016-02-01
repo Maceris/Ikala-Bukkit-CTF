@@ -1,0 +1,111 @@
+name: CTF
+main: com.ikalagaming.bukkit.ctf.Ctf
+version: 0.2.0
+permissions:
+    ctf.*:
+        description: Grants access to all commands
+        children:
+            ctf.join: true
+            ctf.leave: true
+            ctf.create: true
+            ctf.destroy: true
+            ctf.start: true
+            ctf.stop: true
+            ctf.kick: true
+            ctf.reload: true
+            ctf.list: true
+            ctf.help: true
+            ctf.tools: true
+            ctf.disable: true
+            ctf.goto: true
+    ctf.player:
+        description: Grants regular user permissions
+        children:
+            ctf.join: true
+            ctf.leave: true
+            ctf.create: false
+            ctf.destroy: false
+            ctf.start: false
+            ctf.stop: false
+            ctf.kick: false
+            ctf.reload: false
+            ctf.list: true
+            ctf.help: true
+            ctf.tools: false
+            ctf.disable: false
+            ctf.goto: false
+    ctf.managing:
+        description: Grants permissions for managing arena status and player perms
+        children:
+            ctf.join: true
+            ctf.leave: true
+            ctf.create: false
+            ctf.destroy: false
+            ctf.start: true
+            ctf.stop: true
+            ctf.kick: true
+            ctf.reload: false
+            ctf.list: true
+            ctf.help: true
+            ctf.tools: false
+            ctf.disable: false
+            ctf.goto: true
+    ctf.admin:
+        description: Allows creation and destruction of arenas and managing perms
+        children:
+            ctf.join: true
+            ctf.leave: true
+            ctf.create: true
+            ctf.destroy: true
+            ctf.start: true
+            ctf.stop: true
+            ctf.kick: true
+            ctf.reload: false
+            ctf.list: true
+            ctf.help: true
+            ctf.tools: true
+            ctf.disable: false
+            ctf.goto: true
+    ctf.join:
+        description: Allows you to join a ctf game
+        default: op
+    ctf.leave:
+        description: Allows you to leave the ctf game
+        default: op
+    ctf.create:
+        description: Allows you to create ctf arena
+        default: op
+    ctf.destroy:
+        description: Allows you to remove a ctf arena
+        default: op
+    ctf.start:
+        description: Starts all ctf games in an arena
+        default: op
+    ctf.stop:
+        description: Stops all ctf games in an arena
+        default: op
+    ctf.kick:
+        description: Kick a player from a ctf game
+        default: op
+    ctf.reload:
+        description: Allows you to reload the settings for ctf
+        default: op
+    ctf.list:
+        description: Allows you to list the arenas
+        default: op
+    ctf.help:
+        description: Allows you to list help
+        default: op
+    ctf.tools:
+        description: Allows you to access arena creation tools
+        default: op
+    ctf.disable:
+        description: Allows you disable the plugin
+        default: op
+    ctf.goto:
+        description: Allows you teleport to an arena
+        default: op
+commands:
+    ctf:
+        usage: /ctf help
+        description: CTF commands.

@@ -1,0 +1,12 @@
+items:
+    - 267
+    - 353
+    - 364
+    - 369
+itemspawnchance: 10
+maxscore: 5
+flagLifespan: 20
+restartDelay: 10
+stopFireInArenas: true
+stopExplosionsInArenas: true
+stopBuildingIngame: true
